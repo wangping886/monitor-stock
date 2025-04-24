@@ -3,7 +3,7 @@ import pysnowball as ball
 
 
 def getPriceList(codes,dataMap):
-    #循环数组
+    #循环数组 222
     for index,code in enumerate(codes):
         if index==0:###############
             symbol=code
