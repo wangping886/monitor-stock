@@ -28,21 +28,25 @@ ball.set_token("xq_a_token=e9373e1b65ec0f1e6706060d6d5cfca055a5e3fd")
 
 #print(json.dumps(ball.quotec('SH600000'), indent=4))#获取某支股票的行情数据
 
-stockMap = {'SH600011': '华能国际','SH601995': '中金公司','SH601398':'工商银行',#A50权重
+quanzhongMap = {'SH601166':'兴业银行','SH600900':'长江电力',#A50权重
 'SH688981': '中芯国际','SH688256': '寒武纪',#科创权重
-'SZ300750': '宁德时代','SZ300059': '东方财富',#创业权重
+'SZ300750': '宁德时代','SH601398': '工商银行',#创业权重
 }
-stockCodes = list(stockMap.keys())
+quanzhongCodes = list(quanzhongMap.keys())
 
-cosumeMap={'SH600809':'山西汾酒','SH600132':'重庆啤酒','SZ000729':'燕京啤酒','SH600600':'青岛啤酒'}
+cosumeMap={'SH600809':'山西汾酒','SH600132':'重庆啤酒','SZ002475':'立讯精密','SZ002384':'东山精密'}
 cosumeCodes = list(cosumeMap.keys())
+
+aiMap={'SZ300308':'中际旭创','SZ300502':'新易盛','SZ002463':'沪电股份','SZ000063':'中兴通讯','SH600567':'山鹰国际','SH600498':'烽火通信'}
+aiCodes = list(aiMap.keys())
 
 fundMap ={ 'SH588000': '科创50ETF','SH510050': 'A50ETF', 'SH510300': '沪深300','SZ159915':'创业板ETF'}
 fundCodes = list(fundMap.keys())
 
+getPriceList(quanzhongCodes,quanzhongMap)
 getPriceList(cosumeCodes,cosumeMap)
-getPriceList(stockCodes,stockMap)
 getPriceList(fundCodes,fundMap)
+getPriceList(aiCodes,aiMap)
 
 
 
